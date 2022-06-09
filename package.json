@@ -1,0 +1,23 @@
+{
+  "name": "socially",
+  "version": "1.0.0",
+  "description": "Connect to your near ones.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ranjanatul/socially.git"
+  },
+  "author": "atulr",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ranjanatul/socially/issues"
+  },
+  "homepage": "https://github.com/ranjanatul/socially#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
