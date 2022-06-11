@@ -5,6 +5,10 @@ const app = express();
 // import database
 const db = require('./config/mongoose');
 
+// parsing the request
+app.use(express.urlencoded());
+app.use(express.json());
+
 // include layouts in the views using middleware.
 const expressLayouts = require('express-ejs-layouts');
 app.use(expressLayouts);

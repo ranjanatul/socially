@@ -1,0 +1,113 @@
+<link rel="stylesheet" href="/css/auth.css" />
+<script type="text/javascript" src="/js/auth.js"></script>
+<div class="auth-wrapper">
+  <div class="auth-container">
+    <div class="section-btn">
+      <div class="cloud-combine">
+        <img class="clouds-img1" src="/images/cloud.jpg" />
+        <img class="clouds-img2" src="/images/cloud.jpg" />
+      </div>
+      <img class="auth-img" src="/images/auth.jpg" />
+      <button class="login-btn" id="login"> Login </button>
+      <button class="signup-btn" id="signup"> Signup </button>
+    </div>
+    <div class="section-form">
+      <div class="signup">
+        <form onsubmit="return submitSignup(this)">
+          <div class="field-wrapper">
+            <div>
+              <label htmlFor="name">Name: </label>
+            </div>
+            <div>
+              <input
+                type="text"
+                name="name"
+                placeholder="Enter your Full Name"
+                required
+              />
+            </div>
+          </div>
+          <div class="field-wrapper">
+            <div>
+              <label htmlFor="email">Email: </label>
+            </div>
+            <div>
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter your Email Id"
+                required
+              />
+            </div>
+          </div>
+          <div class="field-wrapper">
+            <div>
+              <label htmlFor="password">Password: </label>
+            </div>
+            <div>
+              <input
+                type="password"
+                name="password"
+                placeholder="Enter a password"
+                required
+              />
+            </div>
+          </div>
+          <!-- <div class="field-wrapper">
+            <div>
+              <label htmlFor="reenter password">Re-Enter Password: </label>
+            </div>
+            <div>
+              <input
+                type="text"
+                name="password2"
+                placeholder="Retype your above password"
+                required
+              />
+            </div>
+          </div> -->
+          <div class="field-wrapper">
+            <div>
+              <input id="signup" type="submit" value="Signup" />
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="login">
+        <form onsubmit="return submitLogin(this)">
+          <div class="field-wrapper">
+            <div>
+              <label htmlFor="email">Email: </label>
+            </div>
+            <div>
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter your Email Id"
+                required
+              />
+            </div>
+          </div>
+          <div class="field-wrapper">
+            <div>
+              <label htmlFor="password">Password: </label>
+            </div>
+            <div>
+              <input
+                type="password"
+                name="password"
+                placeholder="Enter your password"
+                required
+              />
+            </div>
+          </div>
+          <div class="field-wrapper">
+            <div>
+              <input type="submit" value="Login" />
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
