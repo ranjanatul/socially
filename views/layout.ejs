@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/layout.css" />
+
+    <!-- inject the found link tags in body here -->
+    <%- style %>
+
+    <title>Socially - lets connect</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- This is a partial where we are including some parts which is common to all the pages. -->
+      <%- include('_header'); %>
+
+      <!-- This is the body, which will render the part that controller will direct like home, profile etc. -->
+      <%- body %>
+
+      <!-- Again this is the partial -->
+      <%- include('_footer'); %>
+    </div>
+
+    <!-- inject the script found in the body here -->
+    <%- script %>
+  </body>
+</html>
