@@ -13,7 +13,7 @@
     </div>
     <div class="section-form">
       <div class="signup">
-        <form onsubmit="return submitSignup(this)">
+        <form action="/user/signup" method="POST">
           <div class="field-wrapper">
             <div>
               <label htmlFor="name">Name: </label>
@@ -68,13 +68,14 @@
           </div>
           <div class="field-wrapper">
             <div>
-              <input id="signup" type="submit" value="Signup" />
+              <input type="submit" value="Sign up" />
+              <!-- <button id="signup" onclick="submitSignup(this)">Submit</button> -->
             </div>
           </div>
         </form>
       </div>
       <div class="login">
-        <form onsubmit="return submitLogin(this)">
+        <form action="/user/login" method="POST">
           <div class="field-wrapper">
             <div>
               <label htmlFor="email">Email: </label>

@@ -178,3 +178,11 @@ navbar ul li a {
 .vh-100 {
   min-height: 100vh;
 }
+
+.capitalise {
+  text-transform: capitalize;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
