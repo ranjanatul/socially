@@ -1,10 +1,26 @@
-<header class="header">
-  <div class="logo">
-    <span class="logo" style="background-color: black">
-      <h1 style="color: #ee6a1f; background: black"> |S| </h1>
-      <h1 class="logo_part"> ocially&nbsp;</h1>
-      &nbsp;
-    </span>
+<div class="header-wrapper">
+  <header class="header">
+    <div class="logo_wrapper">
+      <span class="logo">
+        <h1 style="color: #ee6a1f; background: black"> |S| </h1>
+        <h1 class="logo_part"> ocially&nbsp;</h1>
+        &nbsp;
+      </span>
+    </div>
+    <navbar>
+      <ul id="navbar">
+        <li><a id="home" href="/">Home</a></li>
+        <li><a id="user" href="/user/auth">User</a></li>
+        <li><a id="about" href="/about">About</a></li>
+        <li><a id="help" href="/help">Help</a></li>
+      </ul>
+    </navbar>
+  </header>
+  <hr />
+  <div class="categories flex flex-sa">
+    <div class="item"><a href="/rent">Rent</a></div>
+    <div class="item"><a href="/buy">Sell</a></div>
+    <div class="item"><a href="/sell">Buy</a></div>
   </div>
-  <p>Post whatever you want!</p>
-</header>
+</div>
+<script type="text/javascript" src="/js/header.js"></script>

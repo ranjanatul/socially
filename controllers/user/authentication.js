@@ -5,25 +5,45 @@ module.exports = {
     return res.render('auth');
   },
   signup: (req, res) => {
-    console.log(req.body);
-    User.create({ ...req.body })
-      .then((response) => {
-        return res.render('profile');
+    if (
+      req.body.password !== req.body.password2 ||
+      !req.body.password ||
+      !req.body.email ||
+      !req.body.name
+    ) {
+      return res.render('auth');
+    }
+    User.findOne({ email: req.body.email })
+      .then((user) => {
+        if (!user) {
+          User.create(req.body).then((response) => {
+            return res.render('profile');
+          });
+        } else {
+          return res.render('auth');
+        }
       })
       .catch((error) => {
         console.error(error);
-        return;
+        return res.render('auth');
       });
   },
   login: (req, res) => {
-    User.find({ ...req.body })
-      .then((response) => {
-        console.log(response);
-        return res.render('profile');
+    console.log(req.body);
+    if (!req.body.password || !req.body.email) {
+      return res.render('auth');
+    }
+    User.findOne({ email: req.body.email, password: req.body.password })
+      .then((user) => {
+        if (!user) {
+          return res.render('auth');
+        } else {
+          return res.render('profile');
+        }
       })
       .catch((error) => {
         console.error(error);
-        return;
+        return res.render('auth');
       });
   },
 };

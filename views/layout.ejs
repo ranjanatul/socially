@@ -13,14 +13,17 @@
   </head>
   <body>
     <div class="wrapper">
-      <!-- This is a partial where we are including some parts which is common to all the pages. -->
-      <%- include('_header'); %>
+      <div class="opac-layer vh-100">
+        <div class="container vh-100">
+          <!-- This is a partial where we are including some parts which is common to all the pages. -->
+          <%- include('_header'); %>
 
-      <!-- This is the body, which will render the part that controller will direct like home, profile etc. -->
-      <%- body %>
-
-      <!-- Again this is the partial -->
-      <%- include('_footer'); %>
+          <!-- This is the body, which will render the part that controller will direct like home, profile etc. -->
+          <div class="body-container"> <%- body %> </div>
+          <!-- Again this is the partial -->
+          <%- include('_footer'); %>
+        </div>
+      </div>
     </div>
 
     <!-- inject the script found in the body here -->

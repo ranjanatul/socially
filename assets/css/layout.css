@@ -7,6 +7,12 @@ body {
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
+/* --txt-orng : #ee6a1f; */
+
 .wrapper{
   margin: 0;
   padding: 0;
@@ -15,11 +21,29 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
+  min-height: 100vh;
+  z-index: -1;
+}
+
+.opac-layer {
+  width: 100%;
+  z-index: 0;
+  /* opacity: 0.7; */
+}
+
+.container {
+  height: inherit;
+  width: inherit;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .header {
-
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
 }
 
 .logo {
@@ -30,4 +54,127 @@ body {
   align-self: center;
   font-size: 1.2rem;
   background: #ee6a1f;
+  font-family: monospace;
+}
+
+navbar ul {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+navbar ul li {
+  list-style-type: none;
+  width: 60px;
+  text-align: center;
+  cursor: pointer;
+}
+navbar ul li a {
+  text-decoration: none;
+  color: #f09867;
+  padding: 2px;
+  font-size: 0.9rem;
+  font-family: cursive, monospace;
+  cursor: pointer;
+}
+
+.active {
+  color: black;
+  background-color: #f09867;
+  border-radius: 2px;
+}
+
+.categories {
+  background-color: black;
+}
+
+.categories .item {
+  padding: 5px 0;
+  width: 60px;
+  text-align: center;
+}
+
+.categories .item a{
+  color: #ee6a1f;
+  display: block;
+  width: 100%;
+}
+
+.categories .item a:hover {
+  color: black;
+  background-color: aquamarine;
+  border-radius: 2px;
+}
+
+.body-container {
+  flex-grow: 1;
+  padding-top: 10px;
+}
+
+.footer {
+  /* display: flex; */
+}
+
+.center {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.v-center {
+  align-items: center;
+}
+
+.h-center {
+  justify-content: center;
+}
+
+.flex-c {
+  flex-direction: column;
+}
+
+.flex-sa {
+  justify-content: space-around;
+}
+
+.box {
+  box-sizing: border-box;
+}
+
+.shadow {
+  box-shadow: 1px 1px 4px 4px;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+.color-white{
+  color: white;
+}
+
+.opac8 {
+  opacity: 0.8;
+}
+
+.m-height {
+  min-height: 80vh;
+}
+
+.w-500 {
+  width: 500px;
+}
+
+.p-10 {
+  padding: 10px;
+}
+
+.vh-100 {
+  min-height: 100vh;
 }

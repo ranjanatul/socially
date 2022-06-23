@@ -3,7 +3,7 @@ const port = 8000;
 const app = express();
 
 // import database
-const db = require('./config/mongoose');
+// const db = require('./config/mongoose');
 
 // parsing the request
 app.use(express.urlencoded());

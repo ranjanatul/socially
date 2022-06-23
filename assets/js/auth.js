@@ -26,6 +26,7 @@ function submitSignup(prop) {
     name: prop[0].value,
     email: prop[1].value,
     password: prop[2].value,
+    password2: prop[3].value,
   };
 
   fetch('/user/signup', {
