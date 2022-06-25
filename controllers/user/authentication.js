@@ -2,9 +2,17 @@ const User = require('../../models/user');
 
 module.exports = {
   authentication: (req, res) => {
-    return res.render('auth');
+    if (req.isAuthenticated()) {
+      return res.redirect('/user/profile');
+    }
+    return res.render('auth', {
+      title: 'socially | lets connect',
+    });
   },
   signup: (req, res) => {
+    if (req.isAuthenticated()) {
+      return res.redirect('/user/profile');
+    }
     if (
       req.body.password !== req.body.password2 ||
       !req.body.password ||
@@ -16,8 +24,10 @@ module.exports = {
     User.findOne({ email: req.body.email })
       .then((user) => {
         if (!user) {
-          User.create(req.body).then((response) => {
-            return res.render('profile');
+          User.create(req.body).then((user) => {
+            return res.render('profile', {
+              user,
+            });
           });
         } else {
           return res.render('auth');
@@ -29,21 +39,12 @@ module.exports = {
       });
   },
   login: (req, res) => {
-    console.log(req.body);
-    if (!req.body.password || !req.body.email) {
-      return res.render('auth');
-    }
-    User.findOne({ email: req.body.email, password: req.body.password })
-      .then((user) => {
-        if (!user) {
-          return res.render('auth');
-        } else {
-          return res.render('profile');
-        }
-      })
-      .catch((error) => {
-        console.error(error);
-        return res.render('auth');
-      });
+    return res.redirect('/user/profile');
+  },
+  logout: (req, res) => {
+    req.logout(function (err) {
+      console.log(err || 'Logged out successfully!');
+    });
+    return res.redirect('/');
   },
 };

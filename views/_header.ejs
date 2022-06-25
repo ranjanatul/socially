@@ -9,10 +9,31 @@
     </div>
     <navbar>
       <ul id="navbar">
-        <li><a id="home" href="/">Home</a></li>
-        <li><a id="user" href="/user/auth">User</a></li>
-        <li><a id="about" href="/about">About</a></li>
-        <li><a id="help" href="/help">Help</a></li>
+        <li
+          ><a id="home" href="/"> <i class="fa-solid fa-home icon"></i> </a
+        ></li>
+        <!-- locals.user we are using because locals is being passed via passport to the views so using just user in the first place will give error that user is not defined. -->
+        <% if (locals.user) {%>
+        <li>
+          <a class="capitalize" id="user" href="/user/profile">
+            <i class="fa-solid fa-user icon"></i>
+            <%- include('./utils/_tooltip', { data: user.name }) %>
+          </a>
+        </li>
+        <li>
+          <a class="capitalize" id="user" href="/user/logout">
+            <i class="fa-solid fa-sign-out-alt icon"></i>
+            <%- include('./utils/_tooltip', { data: 'Logout' }) %>
+          </a>
+        </li>
+        <% } else { %>
+        <li
+          ><a id="user" href="/user/auth">
+            Join <%- include('./utils/_tooltip', { data: 'Register or login' })
+            %>
+          </a></li
+        >
+        <% } %>
       </ul>
     </navbar>
   </header>

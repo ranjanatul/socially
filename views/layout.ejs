@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/layout.css" />
 
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/3a855a35dc.js"
+      crossorigin="anonymous"
+    ></script>
+
     <!-- inject the found link tags in body here -->
     <%- style %>
 
@@ -19,7 +25,7 @@
           <%- include('_header'); %>
 
           <!-- This is the body, which will render the part that controller will direct like home, profile etc. -->
-          <div class="body-container"> <%- body %> </div>
+          <main class="main-container"> <%- body %> </main>
           <!-- Again this is the partial -->
           <%- include('_footer'); %>
         </div>

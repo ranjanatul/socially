@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/css/auth.css" />
+<link rel="stylesheet" href="/css/auth_view.css" />
 <script type="text/javascript" src="/js/auth.js"></script>
 <div class="auth-wrapper">
   <div class="auth-container">
@@ -13,7 +13,7 @@
     </div>
     <div class="section-form">
       <div class="signup">
-        <form onsubmit="return submitSignup(this)">
+        <form action="/user/signup" method="POST">
           <div class="field-wrapper">
             <div>
               <label htmlFor="name">Name: </label>
@@ -74,7 +74,7 @@
         </form>
       </div>
       <div class="login">
-        <form onsubmit="return submitLogin(this)">
+        <form action="/user/login" method="POST">
           <div class="field-wrapper">
             <div>
               <label htmlFor="email">Email: </label>
