@@ -1,0 +1,30 @@
+<div id="comment-container">
+  <div class="modal-wrapper">
+    <div class="modal" id="comment">
+      <form action="/comment/create" method="post">
+        <div class="modal-header">
+          <div class="modal-header-text">Write comment:</div>
+          <div class="modal-header-close">
+            <button onclick="handleModal()">
+              <i class="fa-solid fa-times-circle icon"></i>
+            </button>
+          </div>
+        </div>
+        <div class="modal-body">
+          <textarea
+            class="textarea"
+            name="content"
+            id=""
+            placeholder="Post your advertisment here..."
+          ></textarea>
+          <input type="hidden" name="post" value="" />
+        </div>
+        <div class="modal-footer">
+          <input type="button" value="Cancel" onclick="handleModal()" />
+          <input type="submit" value="Send" />
+        </div>
+      </form>
+      <ul class="feed-post"> </ul>
+    </div>
+  </div>
+</div>

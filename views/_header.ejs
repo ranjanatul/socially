@@ -15,13 +15,13 @@
         <!-- locals.user we are using because locals is being passed via passport to the views so using just user in the first place will give error that user is not defined. -->
         <% if (locals.user) {%>
         <li>
-          <a class="capitalize" id="user" href="/user/profile">
+          <a class="capitalize" id="profile" href="/user/profile">
             <i class="fa-solid fa-user icon"></i>
             <%- include('./utils/_tooltip', { data: user.name }) %>
           </a>
         </li>
         <li>
-          <a class="capitalize" id="user" href="/user/logout">
+          <a class="capitalize" id="logout" href="/user/logout">
             <i class="fa-solid fa-sign-out-alt icon"></i>
             <%- include('./utils/_tooltip', { data: 'Logout' }) %>
           </a>

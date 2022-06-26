@@ -6,6 +6,8 @@ window.addEventListener('load', function (e) {
     document.getElementById('home').className = 'active';
   } else if (path == '/user/auth') {
     document.getElementById('user').className = 'active';
+  } else if (path == '/user/profile') {
+    document.getElementById('profile').className = 'active';
   } else if (path == '/about') {
     document.getElementById('about').className = 'active';
   } else if (path == '/help') {

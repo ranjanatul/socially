@@ -21,34 +21,34 @@ signup.addEventListener('click', function () {
   return;
 });
 
-function submitSignup(prop) {
-  const request = {
-    name: prop[0].value,
-    email: prop[1].value,
-    password: prop[2].value,
-    password2: prop[3].value,
-  };
+// function submitSignup(prop) {
+//   const request = {
+//     name: prop[0].value,
+//     email: prop[1].value,
+//     password: prop[2].value,
+//     password2: prop[3].value,
+//   };
 
-  fetch('/user/signup', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(request),
-  });
-}
+//   fetch('/user/signup', {
+//     method: 'POST',
+//     headers: {
+//       'Content-Type': 'application/json',
+//     },
+//     body: JSON.stringify(request),
+//   });
+// }
 
-function submitLogin(prop) {
-  const request = {
-    email: prop[1].value,
-    password: prop[2].value,
-  };
+// function submitLogin(prop) {
+//   const request = {
+//     email: prop[1].value,
+//     password: prop[2].value,
+//   };
 
-  fetch('/user/login', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(request),
-  });
-}
+//   fetch('/user/login', {
+//     method: 'POST',
+//     headers: {
+//       'Content-Type': 'application/json',
+//     },
+//     body: JSON.stringify(request),
+//   });
+// }

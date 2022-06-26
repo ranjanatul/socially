@@ -1,3 +1,14 @@
-module.exports.posts = function (req, res) {
-  return res.render('<p> Your post posted successfully</p>');
+const Post = require('../models/post');
+module.exports = {
+  create: function (req, res) {
+    Post.create({
+      content: req.body.content,
+      user: req.user._id,
+    }).then((post) => {
+      if (!post) {
+        console.log(post);
+      }
+      return res.redirect('/');
+    });
+  },
 };

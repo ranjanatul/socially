@@ -20,6 +20,5 @@ router.get(
   passport.checkAuthentication,
   profile_controller.profile
 );
-router.get('/posts', post_controller.posts);
 
 module.exports = router;
