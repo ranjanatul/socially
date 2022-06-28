@@ -1,7 +1,7 @@
 const modal = document.getElementById('comment-container');
 const show_comment = document.getElementById('show_comment');
 
-function handleModal(postId, comments) {
+function handleModal(postId) {
   event.preventDefault();
   if (modal.style.display === 'block') {
     modal.style.display = 'none';
@@ -9,28 +9,17 @@ function handleModal(postId, comments) {
     modal.style.display = 'block';
   }
   modal.querySelector('input[name="post"]').value = postId;
-  const ul = modal.querySelector('ul');
-  ul.innerHTML = '';
-  JSON.parse(comments).map(({ content, user: { name } }) => {
-    const li = document.createElement('li');
-    li.innerHTML = `
-    <div class="post-container">
-    <div class="post-user">
-      <div class="post-user-name"><small>${name}</small></div>
-      <div class="post-user-delete-action">
-        <i class="fa-solid fa-trash-alt"></i>
-      </div>
-    </div>
-    <div class="post-content" style="min-height: 20px;">${content}</div>
-    <div class="post-action">
-      <div><i class="fa-solid fa-thumbs-up"></i></div>
-      <div><i class="fa-solid fa-thumbs-down"></i></div>
-      <div onclick="handleModal('<%= id %>')">
-        <i class="fa-solid fa-comment"></i>
-      </div>
-    </div>
-  </div>`;
-    ul.appendChild(li);
-  });
   return;
+}
+
+function expandComment(id) {
+  const targetEle = document.getElementById(id);
+  const iconEle = event.target.querySelector('.fa-solid');
+  if (targetEle.style.display == 'flex') {
+    targetEle.style.display = 'none';
+    iconEle.style.transform = 'rotate(0deg)';
+  } else {
+    targetEle.style.display = 'flex';
+    iconEle.style.transform = 'rotate(90deg)';
+  }
 }

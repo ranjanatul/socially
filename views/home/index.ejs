@@ -23,6 +23,8 @@
     <li>
       <%- include('_post', {content: content, name: user.name, id: _id, comments
       }) %>
+      <hr />
+      <%- include('_comment', {comments, _id}) %>
     </li>
     <% }) %>
   </ul>

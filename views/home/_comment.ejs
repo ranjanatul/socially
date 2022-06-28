@@ -1,0 +1,37 @@
+<div class="post-comment-list">
+  <div class="comment-count">
+    <div class="comment-count-text" onclick="expandComment('<%= _id %>')">
+      <div>
+        <i class="fa-solid fa-angle-right"></i>&nbsp; Comments: <%=
+        comments.length %>
+      </div>
+      <%- include('../utils/_tooltip', { data: 'Click to expand' }) %>
+    </div>
+  </div>
+
+  <ul class="feed-post" id="<%= _id %>" style="display: none">
+    <% if (comments.length > 0) { %> <% comments.map(({content, user, _id}) => {
+    %>
+    <li>
+      <div class="post-container">
+        <div class="post-user">
+          <div class="post-user-name"><small><%= user.name %></small></div>
+          <div class="post-user-delete-action">
+            <i class="fa-solid fa-trash-alt"></i>
+          </div>
+        </div>
+        <div class="post-content" style="min-height: 20px"><%= content %></div>
+        <div class="post-action">
+          <div><i class="fa-solid fa-thumbs-up"></i></div>
+          <div><i class="fa-solid fa-thumbs-down"></i></div>
+          <div onclick="handleModal('<%= _id %>')">
+            <i class="fa-solid fa-comment"></i>
+          </div>
+        </div>
+      </div>
+    </li>
+    <% }) %> <% } else { %>
+    <li>No Comments</li>
+    <% } %>
+  </ul>
+</div>

@@ -33,6 +33,7 @@
     padding: 5px;
     margin: 10px 0;
     display: flex;
+    flex-direction: column;
     width: 100%;
     text-align: left;
     box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.6);
@@ -122,3 +123,79 @@
         #comment-container .modal-wrapper .modal form .modal-footer input[type=submit] {
           border: 1px solid #1f89b3;
           background-color: #1f89b3; }
+
+.post-comment-list {
+  position: relative; }
+  .post-comment-list .comment-count {
+    padding-left: 5px; }
+    .post-comment-list .comment-count .comment-count-text {
+      display: inline-block;
+      cursor: pointer; }
+      .post-comment-list .comment-count .comment-count-text tooltip {
+        z-index: 4;
+        visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 100px;
+        background: black;
+        color: white;
+        width: 80px;
+        word-wrap: break-word;
+        border-radius: 4px;
+        border: 1px solid black; }
+        .post-comment-list .comment-count .comment-count-text tooltip text {
+          display: flex;
+          justify-content: center;
+          padding: 2px; }
+          .post-comment-list .comment-count .comment-count-text tooltip text span {
+            font-size: 0.8rem;
+            color: white; }
+        .post-comment-list .comment-count .comment-count-text tooltip text::before {
+          content: " ";
+          color: white;
+          position: absolute;
+          top: 4px;
+          left: -11px;
+          border-width: 5px;
+          border-style: solid;
+          border-color: transparent #151313 transparent transparent; }
+    .post-comment-list .comment-count .comment-count-text:hover tooltip {
+      visibility: visible; }
+  .post-comment-list .comment-count
+.feed-post {
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box; }
+    .post-comment-list .comment-count
+.feed-post li {
+      padding: 5px;
+      margin: 10px 0;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      text-align: left;
+      box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.6);
+      background-color: white;
+      box-sizing: border-box; }
+      .post-comment-list .comment-count
+.feed-post li .post-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column; }
+        .post-comment-list .comment-count
+.feed-post li .post-container .post-user {
+          display: flex;
+          justify-content: space-between; }
+        .post-comment-list .comment-count
+.feed-post li .post-container .post-content {
+          min-height: 60px; }
+        .post-comment-list .comment-count
+.feed-post li .post-container .post-action {
+          display: flex;
+          justify-content: flex-end; }
+          .post-comment-list .comment-count
+.feed-post li .post-container .post-action div {
+            width: 30px; }
