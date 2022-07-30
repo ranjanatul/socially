@@ -13,7 +13,11 @@
     </div>
     <div class="section-form">
       <div class="signup">
-        <form action="/user/signup" method="POST">
+        <form
+          action="/user/signup"
+          method="POST"
+          enctype="application/x-www-form-urlencoded"
+        >
           <div class="field-wrapper">
             <div>
               <label htmlFor="name">Name: </label>
@@ -72,9 +76,16 @@
             </div>
           </div>
         </form>
+        <p>
+          <a href="/user/auth/google">GOogle Sign In</a>
+        </p>
       </div>
       <div class="login">
-        <form action="/user/login" method="POST">
+        <form
+          action="/user/login"
+          method="POST"
+          enctype="application/x-www-form-urlencoded"
+        >
           <div class="field-wrapper">
             <div>
               <label htmlFor="email">Email: </label>
@@ -107,6 +118,9 @@
             </div>
           </div>
         </form>
+        <p>
+          <a href="/user/auth/google">GOogle Sign Up</a>
+        </p>
       </div>
     </div>
   </div>

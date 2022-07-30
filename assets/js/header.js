@@ -1,4 +1,7 @@
 // const navbar_list = document.getElementById('navbar');
+const flashMsgWrapper = document.querySelector('.flash-msg-wrapper');
+const flashMsg = document.querySelector('.flash-msg-text');
+const timeout = 4000;
 
 window.addEventListener('load', function (e) {
   const path = window.location.pathname;
@@ -13,7 +16,25 @@ window.addEventListener('load', function (e) {
   } else if (path == '/help') {
     document.getElementById('help').className = 'active';
   }
+  showFlashMsg();
+  setTimeout(removeFlashMsg, timeout);
 });
+
+function removeFlashMsg() {
+  flashMsgWrapper.style.display = 'none';
+  flashMsgWrapper.style.marginLeft = '-300px';
+}
+
+function keepFlashMsg() {
+  
+}
+
+function showFlashMsg() {
+  if (flashMsg.textContent != '') {
+    flashMsgWrapper.style.display = 'flex';
+    flashMsgWrapper.style.marginLeft = '30px';
+  }
+}
 
 /*
 navbar_list.addEventListener('click', function (e) {

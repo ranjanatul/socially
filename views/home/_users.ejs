@@ -1,0 +1,7 @@
+<% if (locals.user && users.length > 0) { %>
+<ul>
+  <% users.map(({name, _id}) => { %>
+  <li><a href="/user/profile/<%= _id %>"><%= name %></a></li>
+  <% }) %>
+</ul>
+<% } %>

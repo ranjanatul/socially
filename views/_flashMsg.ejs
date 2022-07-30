@@ -1,0 +1,11 @@
+<div class="flash-msg-wrapper">
+  <% if (flash.success || flash.error) { %>
+  <div class="flash-msg-text <%= flash.success.length > 0 ? 'green' : 'red' %>"
+    ><%= flash.success.length > 0 ? flash.success : flash.error %></div
+  >
+  <hr class="hr <%= flash.success.length > 0 ? 'green' : 'red' %>" />
+  <i
+    class="fa-solid fa-motorcycle icon <%= flash.success.length > 0 ? 'txt-green' : 'txt-red' %>"
+  ></i>
+  <%} %>
+</div>

@@ -9,6 +9,8 @@ const db = require('./config/mongoose');
 const session = require('express-session');
 const passport = require('passport');
 const passportLocal = require('./config/passport-local-strategy');
+const passportJwt = require('./config/passport-jwt-strategy');
+const passportGoogle = require('./config/passport-google-oauth2-strategy');
 const MongoStore = require('connect-mongo');
 
 const sassMiddleware = require('node-sass-middleware');
@@ -58,6 +60,15 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use(passport.setAuthenticatedUser);
+
+const flash = require('connect-flash');
+const setFlashMsg = require('./config/setFlashMsgMiddleWare');
+
+app.use(flash());
+app.use(setFlashMsg.setFlash);
+
+// to make uploads folder available to the browser.
+app.use('/user/upload', express.static(__dirname + '/upload'));
 
 // with middleware import route
 app.use('/', require('./routes'));

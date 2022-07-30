@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="/css/mailer.css" />
+<div class="mailer-wrapper">
+  <%- include('../_header') %>
+  <div class="">
+    <div class="">
+      <p>Hey! <%= comment.user.name%></p>
+      <br />
+      <br />
+      <p>Your comment: </p>
+      <p class="comment"> <%= comment.content %> </p>
+      <p>Published now. check who is liking it!!</p>
+    </div>
+    <p>Thanks!</p>
+  </div>
+</div>

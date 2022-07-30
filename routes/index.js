@@ -9,8 +9,11 @@ router.get('/', homeController.home);
 
 // middleware 'router.use' to further decide the sub folder
 router.use('/user', require('./users'));
+router.use('/users', require('./users'));
 router.use('/posts', require('./posts'));
 router.use('/comment', require('./comments'));
+
+router.use('/api', require('./api'));
 
 router.get('/about', homeRoutesController.about);
 router.get('/help', homeRoutesController.help);

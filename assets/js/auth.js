@@ -5,11 +5,14 @@ const signup_div = document.querySelector('.signup');
 
 const signup_submit = document.getElementById('signup');
 
-login.addEventListener('click', function () {
+login.addEventListener('click', function (e) {
   login.disable = true;
   login_div.style.display = 'block';
   signup.disable = false;
   signup_div.style.display = 'none';
+  e.stopPropagation();
+  e.stopImmediatePropagation();
+  console.log('event bubbles', e.bubbles);
   return;
 });
 

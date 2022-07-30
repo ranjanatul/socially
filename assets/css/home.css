@@ -1,3 +1,10 @@
+.main {
+  display: flex; }
+  .main .posts {
+    width: 80%; }
+  .main .users {
+    width: 20%; }
+
 .post-form {
   display: flex;
   width: 100%;

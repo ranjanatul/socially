@@ -40,6 +40,41 @@ $black: black;
   justify-content: space-between;
 }
 
+.flash-msg-wrapper {
+  position: fixed;
+  z-index: 999;
+  padding: 10px;
+  margin-left: -300px;
+  transition: 2s linear margin-left;
+  margin-top: 64px;
+  align-items: center;
+  .red {
+    background-color: red;
+  }
+  .green {
+    background-color: green;
+  }
+  .txt-green {
+    color: green;
+  }
+  .txt-red {
+    color: red;
+  }
+  .flash-msg-text {
+    color: wheat;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: -5px 6px 12px 2px black;
+  }
+  hr {
+    width: 20px;
+  }
+  .icon {
+    font-size: 1.5rem;
+    border-radius: 7px;
+  }
+}
+
 .header {
   display: flex;
   justify-content: space-between;

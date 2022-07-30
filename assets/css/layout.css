@@ -33,6 +33,33 @@ a {
   flex-direction: column;
   justify-content: space-between; }
 
+.flash-msg-wrapper {
+  position: fixed;
+  z-index: 999;
+  padding: 10px;
+  margin-left: -300px;
+  transition: 2s linear margin-left;
+  margin-top: 64px;
+  align-items: center; }
+  .flash-msg-wrapper .red {
+    background-color: red; }
+  .flash-msg-wrapper .green {
+    background-color: green; }
+  .flash-msg-wrapper .txt-green {
+    color: green; }
+  .flash-msg-wrapper .txt-red {
+    color: red; }
+  .flash-msg-wrapper .flash-msg-text {
+    color: wheat;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: -5px 6px 12px 2px black; }
+  .flash-msg-wrapper hr {
+    width: 20px; }
+  .flash-msg-wrapper .icon {
+    font-size: 1.5rem;
+    border-radius: 7px; }
+
 .header {
   display: flex;
   justify-content: space-between;

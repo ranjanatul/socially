@@ -1,5 +1,28 @@
-<h1>This is a profile page. <%= user.name %></h1>
-<!-- 
-<h1
-  >This is a profile page. <% if(locals.user) { %> <%= user.name %> <% } %></h1
-> -->
+<link rel="stylesheet" href="/css/profile.css" />
+<div class="main">
+  <section>
+    <% if (locals.user && user_profile) { %>
+      <% const {name, email, avatar} = user_profile; %>
+      <p>
+        <ul>
+          <li>
+            <img src="<%= avatar %>" alt="<%= name %>" width="100"/>
+          </li>
+          <li><%= name %></li>
+          <li><%= email %></li>
+        </ul>
+      </p>
+    <% } %>
+  </section>
+  <% if (locals.user && (locals.user.id == user_profile.id)) { %>
+    <div class="edit-profile">
+      <button onclick="handleModal('<%= user_profile.name %>', '<%= user_profile.email %>')"><i class="fa-solid fa-pen-alt"></i></button>
+      <%- include('../utils/_modal', {
+        action: '/user/profile/edit',
+        header: 'Edit your profile',
+        submit: 'Update'
+      }) %>
+    </div>
+    <% } %>
+</div>
+<script type="text/javascript" src="/js/profile.js"></script>

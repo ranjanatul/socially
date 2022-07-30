@@ -1,37 +1,41 @@
 <link rel="stylesheet" href="/css/home.css" />
-<section>
-  <h4>Posts</h4>
-  <% if (locals.user) { %>
-  <form
-    class="post-form"
-    action="/posts/create"
-    id="new-post-form"
-    method="post"
-  >
-    <textarea
-      class="textarea"
-      name="content"
-      id=""
-      placeholder="Post your advertisment here..."
-    ></textarea>
-    <input type="submit" value="Post" />
-  </form>
-  <% if (posts.length > 0) { %>
-  <ul class="feed-post">
-    <!-- <%= posts %> -->
-    <% posts.map(({content, user, _id, comments}) => { %>
-    <li>
-      <%- include('_post', {content: content, name: user.name, id: _id, comments
-      }) %>
-      <hr />
-      <%- include('_comment', {comments, _id}) %>
-    </li>
-    <% }) %>
-  </ul>
-  <%- include('_modal') %> <% } else if (locals.user){ %>
-  <div>No Post found.</div>
-  <% } else { %>
-  <div> Welcome to the socially!</div>
-  <% }} %>
-</section>
+<div class="main">
+  <section class="posts">
+    <h4>Posts</h4>
+    <% if (locals.user) { %>
+    <form
+      class="post-form"
+      action="/posts/create"
+      id="new-post-form"
+      method="post"
+    >
+      <textarea
+        class="textarea"
+        name="content"
+        id=""
+        placeholder="Post your advertisment here..."
+        required
+      ></textarea>
+      <input type="submit" value="Post" />
+    </form>
+    <% } %> <% if (posts.length > 0) { %>
+    <ul class="feed-post">
+      <% posts.map(({content, user, _id, comments}) => { %>
+      <li id="post-<%= _id %>">
+        <%- include('_post', {content: content, name: user.name, id: _id,
+        comments, postUserId: user.id }) %> <% if (locals.user) { %>
+        <hr />
+        <%- include('_comment', {comments, _id}) %> <% } %>
+      </li>
+      <% }) %>
+    </ul>
+    <%- include('_modal') %> <% } else if (posts.length == 0){ %>
+    <div>No Post found.</div>
+    <% } else { %>
+    <div> Welcome to the socially!</div>
+    <% } %>
+  </section>
+  <section class="users"> <%- include('_users', { users }) %> </section>
+</div>
+
 <script type="text/javascript" src="/js/home.js"></script>

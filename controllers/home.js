@@ -1,20 +1,24 @@
 const Post = require('../models/post');
+const User = require('../models/user');
+const { all } = require('../routes');
 
-module.exports.home = function (req, res) {
-  if (req.isAuthenticated) {
-    Post.find({})
-      .populate('user')
-      .populate({ path: 'comments', populate: { path: 'user' } })
-      .then((posts) => {
-        return res.render('home', {
-          posts,
-        });
-      })
-      .catch((err) => {
-        console.error(err);
-        return;
+module.exports = {
+  home: async function (req, res) {
+    try {
+      let posts = await Post.find({})
+        .sort({ createdAt: -1 })
+        .populate('user')
+        .populate({ path: 'comments', populate: { path: 'user' } });
+
+      let users = await User.find({});
+
+      return res.render('home', {
+        users: users || [],
+        posts: posts || [],
       });
-  } else {
-    return res.render('home', { posts: [] });
-  }
+    } catch (error) {
+      req.flash('error', 'Something went wrong!');
+      res.redirect('/');
+    }
+  },
 };

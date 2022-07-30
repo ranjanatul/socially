@@ -1,0 +1,23 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+}
+
+.logo {
+  display: flex;
+  background-color: black;
+}
+
+.logo_part {
+  align-self: center;
+  font-size: 1.2rem;
+  background: #ee6a1f;
+  font-family: monospace;
+}
+
+.comment {
+  box-shadow: 7px 4px 14px 0px black;
+    border-radius: 5px;
+    padding: 5px;
+}
