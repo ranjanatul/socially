@@ -20,14 +20,16 @@
     </form>
     <% } %> <% if (posts.length > 0) { %>
     <ul class="feed-post">
-      <% posts.map(({content, user, _id, comments}) => { %>
+      <%if (posts.length > 0) { %> <% posts.map(({content, user, _id, comments,
+      likes}) => { %>
       <li id="post-<%= _id %>">
-        <%- include('_post', {content: content, name: user.name, id: _id,
-        comments, postUserId: user.id }) %> <% if (locals.user) { %>
+        <%- include('_post', {content: content, name: user && user.name, id:
+        _id, comments, postUserId: user && user.id, likes: likes }) %> <% if
+        (locals.user) { %>
         <hr />
         <%- include('_comment', {comments, _id}) %> <% } %>
       </li>
-      <% }) %>
+      <% }) } %>
     </ul>
     <%- include('_modal') %> <% } else if (posts.length == 0){ %>
     <div>No Post found.</div>

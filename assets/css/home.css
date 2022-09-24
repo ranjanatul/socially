@@ -61,6 +61,18 @@
         .feed-post li .post-container .post-action div {
           width: 30px; }
 
+.red {
+  color: red; }
+
+.green {
+  color: green; }
+
+.yellow {
+  color: yellow; }
+
+.black {
+  color: black; }
+
 #comment-container {
   position: fixed;
   display: none;

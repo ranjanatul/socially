@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="/css/auth_view.css" />
 <script type="text/javascript" src="/js/auth.js"></script>
+<!-- <script type="text/javascript" src="../../config/uiParams.js"></script> -->
 <div class="auth-wrapper">
   <div class="auth-container">
     <div class="section-btn">
@@ -82,7 +83,7 @@
       </div>
       <div class="login">
         <form
-          action="/user/login"
+          action=<%= `/user/login` %>
           method="POST"
           enctype="application/x-www-form-urlencoded"
         >

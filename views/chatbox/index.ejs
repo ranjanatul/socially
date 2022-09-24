@@ -1,0 +1,15 @@
+<% if (locals.user) { %>
+<section id="chatbox-wrapper">
+  <div>
+    <div id="chatroom_name"></div>
+    <hr />
+    <ul id="chatbox"> </ul>
+    <div>
+      <form id="message-form">
+        <input id="message-input" type="text" />
+        <input type="submit" value="Send" />
+      </form>
+    </div>
+  </div>
+</section>
+<% } %>

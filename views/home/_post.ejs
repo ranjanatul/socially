@@ -12,8 +12,26 @@
   <div class="post-content"><%= content %></div>
   <% if (locals.user) { %>
   <div class="post-action">
-    <div><i class="fa-solid fa-thumbs-up"></i></div>
-    <div><i class="fa-solid fa-thumbs-down"></i></div>
+    <div>
+      <a onclick="toggleLike('Post', '<%= id %>', 'lk')">
+        <% if (likes.find(({user, value}) => user._id == locals.user.id && value
+        === 'liked')) { %>
+        <i class="fa-solid fa-thumbs-up green"></i>
+        <% } else { %>
+        <i class="fa-solid fa-thumbs-up"></i>
+        <% } %>
+      </a>
+    </div>
+    <div>
+      <a onclick="toggleLike('Post', '<%= id %>', 'dlk')">
+        <% if (likes.find(({user, value}) => user._id == locals.user.id && value
+        === 'disliked')) { %>
+        <i class="fa-solid fa-thumbs-down red"></i>
+        <% } else { %>
+        <i class="fa-solid fa-thumbs-down"></i>
+        <% } %>
+      </a>
+    </div>
     <div onclick="handleModal('<%= id %>')">
       <i class="fa-solid fa-comment"></i>
     </div>

@@ -259,3 +259,24 @@ ul#navbar {
 .uppercase {
   text-transform: uppercase;
 }
+
+// chat box styling
+
+#chatbox-wrapper {
+  position:absolute;
+  right: 0;
+  bottom: 0;
+  border: 1px solid black;
+  background-color: yellow;
+  ul {
+    list-style-type: none;
+  }
+  .self{
+    display: flex;
+    justify-content: end;
+  }
+  .other {
+    display: flex;
+    justify-content: start;
+  }
+}

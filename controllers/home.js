@@ -8,7 +8,8 @@ module.exports = {
       let posts = await Post.find({})
         .sort({ createdAt: -1 })
         .populate('user')
-        .populate({ path: 'comments', populate: { path: 'user' } });
+        .populate({ path: 'comments', populate: { path: 'user' } })
+        .populate([{ path: 'likes' }]);
 
       let users = await User.find({});
 

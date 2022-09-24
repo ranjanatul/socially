@@ -205,3 +205,18 @@ ul#navbar {
 
 .uppercase {
   text-transform: uppercase; }
+
+#chatbox-wrapper {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border: 1px solid black;
+  background-color: yellow; }
+  #chatbox-wrapper ul {
+    list-style-type: none; }
+  #chatbox-wrapper .self {
+    display: flex;
+    justify-content: end; }
+  #chatbox-wrapper .other {
+    display: flex;
+    justify-content: start; }

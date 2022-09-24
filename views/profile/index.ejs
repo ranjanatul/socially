@@ -14,7 +14,7 @@
       </p>
     <% } %>
   </section>
-  <% if (locals.user && (locals.user.id == user_profile.id)) { %>
+  <% if (locals.user && user._id == user_profile._id) { %>
     <div class="edit-profile">
       <button onclick="handleModal('<%= user_profile.name %>', '<%= user_profile.email %>')"><i class="fa-solid fa-pen-alt"></i></button>
       <%- include('../utils/_modal', {
@@ -24,5 +24,26 @@
       }) %>
     </div>
     <% } %>
+    <% if (locals.user && (locals.user.id !== user_profile.id)) { %>
+      <!-- inside user, friend will have entry in "from" if the friend request was sent -->
+      <% if (friendshipStatus == true) { %>
+          <button onclick="">Your friend</button>
+        <% } else if (friendshipStatus == false) { %>
+          <button onclick="">Request sent</button>
+        <% } else { %>
+        <button onclick="sendRequest('<%= user_profile._id %>')">Send friend request</button>
+      <% } %>    
+      
+    <% } %>
+    <section>
+      <div>
+      <form id="friend" onsubmit="findFriend()">
+        <input type="text" id="find_friend" placeholder="Enter friend name" minlength="3" required="true"/>
+        <input type="submit"/>
+      </form>
+      </div>
+      <ul id="friend-list">
+      </ul>
+    </section>
 </div>
 <script type="text/javascript" src="/js/profile.js"></script>

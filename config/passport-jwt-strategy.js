@@ -1,11 +1,12 @@
 const passport = require('passport');
 const JWTStrategy = require('passport-jwt').Strategy;
 const ExtractJWT = require('passport-jwt').ExtractJwt;
+const env = require('./environment');
 
 const User = require('../models/user');
 let opts = {
   jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(),
-  secretOrKey: 'socially',
+  secretOrKey: env.jwt_token,
 };
 
 passport.use(

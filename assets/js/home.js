@@ -183,4 +183,17 @@
     //   iconEle.style.transform = 'rotate(90deg)';
     // }
   }
+
+  function toggleLike(type, id, category) {
+    $.ajax({
+      url: `/likes/toggle?type=${type}&id=${id}&category=${category}`,
+      method: 'POST',
+      success: function (response) {
+        console.log(response);
+      },
+      error: function (error) {
+        console.log(error);
+      },
+    });
+  }
 }

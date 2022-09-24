@@ -1,0 +1,40 @@
+::1 - - [22/Sep/2022:05:15:46 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36 Edg/105.0.1343.42"
+::1 - - [22/Sep/2022:05:15:46 +0000] "GET /css/layout.css HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36 Edg/105.0.1343.42"
+::1 - - [22/Sep/2022:05:15:46 +0000] "GET /js/header.js HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36 Edg/105.0.1343.42"
+::1 - - [22/Sep/2022:05:15:46 +0000] "GET /js/home.js HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36 Edg/105.0.1343.42"
+::1 - - [22/Sep/2022:05:15:46 +0000] "GET /css/home.css HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36 Edg/105.0.1343.42"
+::1 - - [22/Sep/2022:05:15:46 +0000] "GET /js/jquery.js HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36 Edg/105.0.1343.42"
+::1 - - [22/Sep/2022:05:15:46 +0000] "GET /js/chat_engine.js HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36 Edg/105.0.1343.42"
+::1 - - [22/Sep/2022:05:15:46 +0000] "GET /images/sell_online.jpg HTTP/1.1" 304 - "http://localhost:8000/css/layout.css" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36 Edg/105.0.1343.42"
+[0mGET / [36m304[0m 77.531 ms - -[0m
+[0mGET /css/layout.css [36m304[0m 9.350 ms - -[0m
+[0mGET /js/home.js [36m304[0m 9.866 ms - -[0m
+[0mGET /js/chat_engine.js [36m304[0m 5.586 ms - -[0m
+[0mGET /css/home.css [36m304[0m 12.213 ms - -[0m
+[0mGET /js/header.js [36m304[0m 9.121 ms - -[0m
+[0mGET /js/jquery.js [36m304[0m 5.852 ms - -[0m
+[0mGET /images/sell_online.jpg [36m304[0m 2.358 ms - -[0m
+[0mGET / [36m304[0m 38.776 ms - -[0m
+[0mGET /css/layout.css [36m304[0m 2.621 ms - -[0m
+[0mGET /js/jquery.js [36m304[0m 10.332 ms - -[0m
+[0mGET /css/home.css [36m304[0m 6.509 ms - -[0m
+[0mGET /js/header.js [36m304[0m 7.704 ms - -[0m
+[0mGET /js/home.js [36m304[0m 6.914 ms - -[0m
+[0mGET /js/chat_engine.js [36m304[0m 4.874 ms - -[0m
+[0mGET /images/sell_online.jpg [36m304[0m 3.651 ms - -[0m
+::1 - - [22/Sep/2022:05:17:10 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36 Edg/105.0.1343.42"
+::1 - - [22/Sep/2022:05:17:10 +0000] "GET /js/header.js HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36 Edg/105.0.1343.42"
+::1 - - [22/Sep/2022:05:17:10 +0000] "GET /css/layout.css HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36 Edg/105.0.1343.42"
+::1 - - [22/Sep/2022:05:17:10 +0000] "GET /js/home.js HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36 Edg/105.0.1343.42"
+::1 - - [22/Sep/2022:05:17:10 +0000] "GET /css/home.css HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36 Edg/105.0.1343.42"
+::1 - - [22/Sep/2022:05:17:10 +0000] "GET /js/jquery.js HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36 Edg/105.0.1343.42"
+::1 - - [22/Sep/2022:05:17:10 +0000] "GET /js/chat_engine.js HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36 Edg/105.0.1343.42"
+::1 - - [22/Sep/2022:05:17:10 +0000] "GET /images/sell_online.jpg HTTP/1.1" 304 - "http://localhost:8000/css/layout.css" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36 Edg/105.0.1343.42"
+[0mGET / [36m304[0m 73.243 ms - -[0m
+[0mGET /css/layout.css [36m304[0m 12.228 ms - -[0m
+[0mGET /js/jquery.js [36m304[0m 6.341 ms - -[0m
+[0mGET /js/chat_engine.js [36m304[0m 9.237 ms - -[0m
+[0mGET /css/home.css [36m304[0m 9.009 ms - -[0m
+[0mGET /js/header.js [36m304[0m 13.185 ms - -[0m
+[0mGET /js/home.js [36m304[0m 9.025 ms - -[0m
+[0mGET /images/sell_online.jpg [36m304[0m 1.330 ms - -[0m

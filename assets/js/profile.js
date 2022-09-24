@@ -52,4 +52,38 @@
   </div></div>
     `);
   }
+
+  function findFriend() {
+    event.preventDefault();
+    $.ajax({
+      url: '/user/find',
+      method: 'post',
+      data: {
+        name: document.getElementById('find_friend').value,
+      },
+      success: (response) => {
+        const list = document.getElementById('friend-list');
+        const items = response.data.result.map(({ name, url }) => {
+          return `<li><a href=${url}>${name}</a></li>`;
+        });
+        list.innerHTML = items;
+      },
+      error: (error) => {
+        console.log(error);
+      },
+    });
+  }
+
+  function sendRequest(id) {
+    if (id && id !== '') {
+      $.ajax({
+        url: `/friend/add?fid=${id}`,
+        method: 'post',
+        success: (response) => {},
+        error: (response) => {},
+      });
+    } else {
+      alert('Don\t be smart!');
+    }
+  }
 }

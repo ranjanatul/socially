@@ -4,11 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/layout.css" />
+    <link rel="stylesheet" href="<%= assetPath('css/layout.css') %>" />
 
     <!-- Jquery -->
 
-    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script
+      type="text/javascript"
+      src="<%= assetPath('js/jquery.js') %>"
+    ></script>
 
     <!-- fontawesome -->
     <script
@@ -31,6 +34,7 @@
     <div class="wrapper">
       <div class="opac-layer vh-100">
         <div class="container vh-100">
+          <%- include('./chatbox/index') %>
           <!-- This is a partial where we are including some parts which is common to all the pages. -->
           <%- include('_header'); %>
 
@@ -44,5 +48,12 @@
 
     <!-- inject the script found in the body here -->
     <%- script %>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.2/socket.io.js"></script>
+    <script src="<%= assetPath('js/chat_engine.js') %>"></script>
+    <% if (locals.user) { %>
+    <script>
+      new ChatEngine('chatbox-wrapper', '<%= locals.user.email %>');
+    </script>
+    <% } %>
   </body>
 </html>
