@@ -69,4 +69,4 @@ const production = {
 };
 
 module.exports =
-  eval(process.env.node_env) == 'production' ? production : development;
+  eval(process.env.NODE_ENV) == 'production' ? production : development;

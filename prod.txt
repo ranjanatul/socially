@@ -1,0 +1,34 @@
+export SOCIALLY_ENV="production"
+export SOCIALLY_ASSET_PATH="./public/assets"
+export SOCIALLY_SESSION_COOKIE_KEY="$2a$12$Tcyik76f1r0vZBjL1YNEaujEowWszzbD1gInsY4PoIwpL8iRbpkJK"
+export SOCIALLY_DB="SOCIALLY"
+export SOCIALLY_GOOGLE_CLIENTID="882805485844-jml8t6kknbjr6srt80o9unl1hdfljsha.apps.googleusercontent.com"
+export SOCIALLY_GOOGLE_CLIENT_SERVER="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"
+export SOCIALLY_GOOGLE_CALLBACKURL="http://54.242.154.33/users/auth/google/callback"
+export SOCIALLY_NODEMAILER_AUTH_USERNAME="atul.ranjan100@gmail.com"
+export SOCIALLY_NODEMAILER_AUTH_PASS="qfftlcuzraufrpch"
+export SOCIALLY_NODEMAILER_SERVICE="gmail"
+export SOCIALLY_NODEMAILER_HOST="smtp.gmail.com"
+export SOCIALLY_NODEMAILER_PORT="587"
+export SOCIALLY_NODEMAILER_SECURE="false"
+export SOCIALLY_NODEMAILER_JWT_TOKEN="$2a$12$nxXdE54sGzbHGkN2NJqCJOy9FU5SvNZtu1IZbwc/s6oSLQlDDdrr."
+
+git pass key for prod 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
+
+Issues found in production setup
+
+while installing mongodb
+
+Issue: The following packages have unmet dependencies:
+ mongodb-org-mongos : Depends: libssl1.1 (>= 1.1.1) but it is not installable
+ mongodb-org-server : Depends: libssl1.1 (>= 1.1.1) but it is not installable
+E: Unable to correct problems, you have held broken packages.
+
+Fix: 
+Download libssl1.1_1.1.1f-1ubuntu2_amd64.deb from official repository:
+wget http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.1f-1ubuntu2_amd64.deb
+Install it:
+sudo dpkg -i libssl1.1_1.1.1f-1ubuntu2_amd64.deb
+Proceed with the installation of MongoDB:
+
+sudo apt-get install -y mongodb-org
