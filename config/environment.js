@@ -23,17 +23,17 @@ const development = {
     port: 587,
     secure: false,
     auth: {
-      user: 'atul.ranjan100@gmail.com',
-      pass: 'qfftlcuzraufrpch',
+      user: '',
+      pass: '',
     },
   },
   google: {
     clientID:
-      '882805485844-jml8t6kknbjr6srt80o9unl1hdfljsha.apps.googleusercontent.com',
-    clientSecret: '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',
+      '882805485844.apps.googleusercontent.com',
+    clientSecret: 'GOCSPX-',
     callbackURL: 'http://localhost:8000/users/auth/google/callback',
   },
-  jwt_token: '$2a$12$nxXdE54sGzbHGkN2NJqCJOy9FU5SvNZtu1IZbwc/s6oSLQlDDdrr.',
+  jwt_token: '$2a$12$nxXdE54sGzbHGkNtu1IZbwc/s6oSLQlDDdrr.',
   morgan: {
     mode: 'combined',
     options: { stream: accessLogStream },
